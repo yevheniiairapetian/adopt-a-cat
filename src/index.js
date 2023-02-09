@@ -46,7 +46,7 @@ function createCard(title, imageUrl) {
   // and add it to the cardBody
   const cardTitle = document.createElement("h2");
   cardTitle.classList.add("card-title");
-  cardTitle.innerHTML(createCard(title));
+  createCard(cardTitle.innerHTML);
   cardBody.appendChild(cardTitle);
   // Step3: Create the cardButton button, add the class card-button,
   // set the text inside the tag to be "Adopt Now"
@@ -60,6 +60,7 @@ function createCard(title, imageUrl) {
  call the function createCard with the corresponding parameter */
 }
 
-for (let i = 0; i > animalsToAdopt.length - 1; i--) {
-  createCard(.[i], animalsToAdopt.[i]);
+for (let i = 0; i < animalsToAdopt.length; i++) {
+  createCard(animalsToAdopt[i]);
 }
+createCard(animalsToAdopt.name, animalsToAdopt.picture);
